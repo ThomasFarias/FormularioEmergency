@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximun-scale=1.0,minimun-scale=1.0"><!--las escalas indican un punto inicial, la escala maxima y minima-->
+        <script src="js/jquery.js"></script>
+        <link rel="stylesheet" href="css/estilo.css"> 
+        <title>Emergency Registro</title>
+    </head>
+    <body>
+
+        
+            <h1 class="form__titulo"><strong>Registro Emergency</strong></h1>
+           
+            <form id="formulario" action="#" method="post">
+                
+                 <div class="contenedor-inputs">
+                    <div class="campo">
+                      <h3>Nombres Completo *</h3>
+                       <input type="text" placeholder="Harrison Ford" class="input-48" name="nombre" id="nombre" required></div>
+                        <!-Valida que se tenga que ingresar un nombre ->
+
+                <div class="campo">
+                    <h3>Run *</h3>
+                    <input type="text" placeholder="20099424k" class="input-48" name="rut"
+                            id="rut" required pattern="^([0-9]{8})([0-9.k?]{1})$">
+                            <!-Valida que sea solo pueda ingresar 8 numeros y el digito verificador ->
+                   </div>
+
+                     <div class="campo">
+                        <h3>Correo Electrónico *</h3>
+                       <input type="email" placeholder="mail.random@algo.cl" class="input-48" name="email" id="email"  required pattern=".+@+.+"    > 
+                       <!- Validar que sea ingresado un email y que siga el siguiente patron: nombre@dominio.algo*/ ->
+                   </div>
+
+
+                    
+                     <div class="campo">
+                        <h3>Fecha de Nacimiento *</h3>
+                      
+                       <input type="text" placeholder="DD.MM.AAAA"  class="input-48" name="fec_nac" id="fec_nac" required pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
+
+                       <!- Valida el ingreso de la fecha con el formato:DD.MM.YYYY->
+                   </div>
+
+
+                     <div class="campo">
+                        <h3>Contraseña *</h3>
+                      
+                       <input type="password"   class="input-48" name="pass" id="pass" required >
+
+                   </div>
+                    <div class="campo">
+                        <h3>Repetir Contraseña *</h3>
+                      
+                       <input type="password"   class="input-48" name="pass2" id="pass2" required >
+
+                   </div>
+                   
+
+
+
+                   
+                       
+                         
+                       
+                       
+                      
+                        
+                     <input type="submit" value="Enviar" class="btn-enviar" id="btn-enviar">
+                 </div>
+        
+            </form>
+
+    <script  src="js/codigo.js"></script>    
+    </body>
+</html>
